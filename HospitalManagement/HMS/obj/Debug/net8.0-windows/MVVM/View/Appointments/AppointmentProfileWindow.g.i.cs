@@ -9,11 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using HMS;
-using HMS.MVVM.View;
 using HMS.MVVM.View.Appointments;
-using HMS.MVVM.View.UserControls;
-using HMS.MVVM.ViewModel;
 using HMS.MVVM.ViewModel.Profiles;
 using System;
 using System.Diagnostics;
@@ -24,6 +20,7 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Controls.Ribbon;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms.Integration;
 using System.Windows.Ink;
 using System.Windows.Input;
 using System.Windows.Markup;
