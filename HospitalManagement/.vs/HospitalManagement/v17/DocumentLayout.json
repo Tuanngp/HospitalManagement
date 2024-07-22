@@ -1,10 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\FPT_Uni\\PRN301\\HospitalManagement\\HospitalManagement\\",
+  "WorkspaceRootPath": "C:\\.NET\\Project PRN\\final\\HospitalManagement\\HospitalManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4D4E83A6-A363-4F7A-B2B3-47C035E8FD61}|HMS\\HMS.csproj|d:\\fpt_uni\\prn301\\hospitalmanagement\\hospitalmanagement\\hms\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{4D4E83A6-A363-4F7A-B2B3-47C035E8FD61}|HMS\\HMS.csproj|C:\\.NET\\Project PRN\\final\\HospitalManagement\\HospitalManagement\\hms\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D4E83A6-A363-4F7A-B2B3-47C035E8FD61}|HMS\\HMS.csproj|solutionrelative:hms\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D4E83A6-A363-4F7A-B2B3-47C035E8FD61}|HMS\\HMS.csproj|c:\\.net\\project prn\\final\\hospitalmanagement\\hospitalmanagement\\hms\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4D4E83A6-A363-4F7A-B2B3-47C035E8FD61}|HMS\\HMS.csproj|solutionrelative:hms\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D4E83A6-A363-4F7A-B2B3-47C035E8FD61}|HMS\\HMS.csproj|C:\\.NET\\Project PRN\\final\\HospitalManagement\\HospitalManagement\\hms\\mvvm\\viewmodel\\mainwindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D4E83A6-A363-4F7A-B2B3-47C035E8FD61}|HMS\\HMS.csproj|solutionrelative:hms\\mvvm\\viewmodel\\mainwindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D4E83A6-A363-4F7A-B2B3-47C035E8FD61}|HMS\\HMS.csproj|C:\\.NET\\Project PRN\\final\\HospitalManagement\\HospitalManagement\\hms\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4D4E83A6-A363-4F7A-B2B3-47C035E8FD61}|HMS\\HMS.csproj|solutionrelative:hms\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D4E83A6-A363-4F7A-B2B3-47C035E8FD61}|HMS\\HMS.csproj|C:\\.NET\\Project PRN\\final\\HospitalManagement\\HospitalManagement\\hms\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D4E83A6-A363-4F7A-B2B3-47C035E8FD61}|HMS\\HMS.csproj|solutionrelative:hms\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,31 +30,93 @@
       "DocumentGroups": [
         {
           "DockedWidth": 986,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\.NET\\Project PRN\\final\\HospitalManagement\\HospitalManagement\\HMS\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "HMS\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\.NET\\Project PRN\\final\\HospitalManagement\\HospitalManagement\\HMS\\MainWindow.xaml.cs",
+              "RelativeToolTip": "HMS\\MainWindow.xaml.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAlwEgAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T14:55:40.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\.NET\\Project PRN\\final\\HospitalManagement\\HospitalManagement\\HMS\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "HMS\\MainWindow.xaml",
+              "ToolTip": "C:\\.NET\\Project PRN\\final\\HospitalManagement\\HospitalManagement\\HMS\\MainWindow.xaml",
+              "RelativeToolTip": "HMS\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-22T14:55:37.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindowVM.cs",
+              "DocumentMoniker": "C:\\.NET\\Project PRN\\final\\HospitalManagement\\HospitalManagement\\HMS\\MVVM\\ViewModel\\MainWindowVM.cs",
+              "RelativeDocumentMoniker": "HMS\\MVVM\\ViewModel\\MainWindowVM.cs",
+              "ToolTip": "C:\\.NET\\Project PRN\\final\\HospitalManagement\\HospitalManagement\\HMS\\MVVM\\ViewModel\\MainWindowVM.cs",
+              "RelativeToolTip": "HMS\\MVVM\\ViewModel\\MainWindowVM.cs",
+              "ViewState": "AQIAAOIAAAAAAAAAAAArwPkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T14:52:19.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdminWindow.xaml.cs",
+              "DocumentMoniker": "C:\\.NET\\Project PRN\\final\\HospitalManagement\\HospitalManagement\\HMS\\AdminWindow.xaml.cs",
+              "RelativeDocumentMoniker": "HMS\\AdminWindow.xaml.cs",
+              "ToolTip": "C:\\.NET\\Project PRN\\final\\HospitalManagement\\HospitalManagement\\HMS\\AdminWindow.xaml.cs",
+              "RelativeToolTip": "HMS\\AdminWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T14:51:59.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AdminWindow.xaml",
-              "DocumentMoniker": "D:\\FPT_Uni\\PRN301\\HospitalManagement\\HospitalManagement\\HMS\\AdminWindow.xaml",
+              "DocumentMoniker": "C:\\.NET\\Project PRN\\final\\HospitalManagement\\HospitalManagement\\HMS\\AdminWindow.xaml",
               "RelativeDocumentMoniker": "HMS\\AdminWindow.xaml",
-              "ToolTip": "D:\\FPT_Uni\\PRN301\\HospitalManagement\\HospitalManagement\\HMS\\AdminWindow.xaml",
+              "ToolTip": "C:\\.NET\\Project PRN\\final\\HospitalManagement\\HospitalManagement\\HMS\\AdminWindow.xaml",
               "RelativeToolTip": "HMS\\AdminWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-07-22T13:14:28.012Z",
               "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 5,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
             }
           ]
         }

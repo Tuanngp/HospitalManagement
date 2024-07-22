@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\FPT_Uni\PRN301\HospitalManagement\HospitalManagement\HMS\obj\Debug\net8.0-windows\
+C:\.NET\Project PRN\final\HospitalManagement\HospitalManagement\HMS\obj\Debug\net8.0-windows\
 HMS
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\FPT_Uni\PRN301\HospitalManagement\HospitalManagement\HMS\App.xaml
+C:\.NET\Project PRN\final\HospitalManagement\HospitalManagement\HMS\App.xaml
 44-177332366
 
 86-646321236
-247-1539597591
+247647988426
 AddPatientWindow.xaml;AdminWindow.xaml;MainWindow.xaml;MVVM\View\AdminDoctors.xaml;MVVM\View\AdminDrugs.xaml;MVVM\View\AdminTests.xaml;MVVM\View\AdminUsers.xaml;MVVM\View\Appointments\AddAppointmentWindow.xaml;MVVM\View\Appointments\AppointmentProfileWindow.xaml;MVVM\View\Doctors\AddDoctorWindow.xaml;MVVM\View\Doctors\EditDoctorWindow.xaml;MVVM\View\Drugs\AddDrugWindow.xaml;MVVM\View\MessageWindow\MessageWindow.xaml;MVVM\View\MessageWindow\WarningMessageWindow.xaml;MVVM\View\Patients\EditPatientWindow.xaml;MVVM\View\Patients\PatientProfileWindow.xaml;MVVM\View\Prescriptions\AddPrescriptionWindow.xaml;MVVM\View\Prescriptions\PrescriptionProfileWindow.xaml;MVVM\View\SplashScreenWindow.xaml;MVVM\View\Tests\AddTestWindow.xaml;MVVM\View\Tests\EditTestWindow.xaml;MVVM\View\UserAppointments.xaml;MVVM\View\UserBilling.xaml;MVVM\View\UserControls\InfoCard.xaml;MVVM\View\UserControls\MyOption.xaml;MVVM\View\UserControls\MyTextBox.xaml;MVVM\View\UserControls\Order.xaml;MVVM\View\UserControls\Order2.xaml;MVVM\View\UserDashboard.xaml;MVVM\View\UserGuides\AdminUserGuide1.xaml;MVVM\View\UserGuides\AdminUserGuide2.xaml;MVVM\View\UserGuides\NormalUserGuideWindow.xaml;MVVM\View\UserGuides\NormalUserGuideWindow2.xaml;MVVM\View\UserGuides\NormalUserGuideWindow3.xaml;MVVM\View\UserGuides\NormalUserGuideWindow4.xaml;MVVM\View\UserPatients.xaml;MVVM\View\UserPrescriptions.xaml;MVVM\View\Users\AddUserWindow.xaml;MVVM\View\Users\EditUserWindow.xaml;NormalUserWindow.xaml;Themes\AddPatientTheme.xaml;Themes\DashboardTabTheme.xaml;Themes\DashboardTheme.xaml;Themes\LoginTheme.xaml;
 
 False

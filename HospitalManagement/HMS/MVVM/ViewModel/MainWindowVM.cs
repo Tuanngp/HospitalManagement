@@ -14,7 +14,7 @@ namespace HMS.MVVM.ViewModel
             Random random = new Random();
 
             //// Create some dummy for bill data
-            using (var context = new DataContext())
+            /*using (var context = new DataContext())
             {
                 // To Make Dummies
 
@@ -245,7 +245,7 @@ namespace HMS.MVVM.ViewModel
                     context.Users.Add(new User("Bond", "16969", true));
                     context.SaveChanges();
                 }
-            }
+            }*//**/
 
         }
     }
