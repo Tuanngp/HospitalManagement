@@ -1,25 +1,13 @@
-﻿using HMS.MVVM.View.UserGuides;
-using HMS.MVVM.ViewModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HMS.MVVM.ViewModel;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace HMS
 {
-	/// <summary>
-	/// Interaction logic for AdminWindow.xaml
-	/// </summary>
-	public partial class AdminWindow : Window
+    /// <summary>
+    /// Interaction logic for AdminWindow.xaml
+    /// </summary>
+    public partial class AdminWindow : Window
 	{
 		private void Border_Mousedown(object sender, MouseButtonEventArgs e)
 		{
@@ -36,9 +24,9 @@ namespace HMS
 
 		public AdminWindow()
 		{
-			var userGuide = new AdminUserGuide1();
+/*			var userGuide = new AdminUserGuide1();
 			userGuide.Topmost = true;
-			userGuide.Show();
+			userGuide.Show();*/
 
 			DataContext = new AdminWindowVM();
 			InitializeComponent();

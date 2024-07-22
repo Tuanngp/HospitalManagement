@@ -40,9 +40,9 @@ namespace HMS
 
 		public NormalUserWindow()
 		{
-            var guideWindow = new NormalUserGuideWindow();
-	    guideWindow.Topmost = true;
-            guideWindow.Show();
+/*            var guideWindow = new NormalUserGuideWindow();
+			guideWindow.Topmost = true;
+            guideWindow.Show();*/
 
             DataContext = new NormalUserWindowVM();
 			InitializeComponent();

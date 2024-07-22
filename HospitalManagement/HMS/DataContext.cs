@@ -33,9 +33,9 @@ namespace HMS
         {
             var builder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
             IConfigurationRoot configuration = builder.Build();
-            optionsBuilder.UseSqlServer(configuration.GetConnectionString("MyStockDB"));
+            optionsBuilder.UseSqlServer(configuration.GetConnectionString("MyHospital"));
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

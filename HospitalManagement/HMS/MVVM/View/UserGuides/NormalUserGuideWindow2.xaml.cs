@@ -33,8 +33,8 @@ namespace HMS.MVVM.View.UserGuides
         private void Back_Button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-            var normalUserGuideWindow = new NormalUserGuideWindow();
-            normalUserGuideWindow.Show();
+/*            var normalUserGuideWindow = new NormalUserGuideWindow();
+            normalUserGuideWindow.Show();*/
         }
 
 
