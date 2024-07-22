@@ -61,9 +61,6 @@
     <Page Update="MVVM\View\Prescriptions\PrescriptionProfileWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MVVM\View\SplashScreenWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="MVVM\View\Tests\AddTestWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -92,24 +89,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\View\UserDashboard.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="MVVM\View\UserGuides\AdminUserGuide1.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="MVVM\View\UserGuides\AdminUserGuide2.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="MVVM\View\UserGuides\NormalUserGuideWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="MVVM\View\UserGuides\NormalUserGuideWindow2.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="MVVM\View\UserGuides\NormalUserGuideWindow3.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="MVVM\View\UserGuides\NormalUserGuideWindow4.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MVVM\View\UserPatients.xaml">

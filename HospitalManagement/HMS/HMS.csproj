@@ -9,27 +9,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Images\add-doctor.mp4" />
-    <None Remove="Images\add-patient.mp4" />
     <None Remove="Images\appointment.jpg" />
     <None Remove="Images\appointment2.png" />
     <None Remove="Images\blood-test.png" />
     <None Remove="Images\doctor.png" />
     <None Remove="Images\drug.png" />
-    <None Remove="Images\edit-profile.mp4" />
     <None Remove="Images\hosp.png" />
     <None Remove="Images\hosp2.png" />
     <None Remove="Images\hospital.png" />
     <None Remove="Images\hospitalLogo.png" />
     <None Remove="Images\nurse.png" />
-    <None Remove="Images\patient-profile.mp4" />
     <None Remove="Images\patient.png" />
     <None Remove="Images\patientInfo.png" />
     <None Remove="Images\prescription.png" />
     <None Remove="Images\prescription2.png" />
     <None Remove="Images\success.png" />
-    <None Remove="Images\switching-between-tabs-admin.mp4" />
-    <None Remove="Images\switching-between-tabs.mp4" />
     <None Remove="Images\userImage.png" />
     <None Remove="Images\warning.png" />
   </ItemGroup>
@@ -55,14 +49,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\add-doctor.mp4" />
-    <Resource Include="Images\add-patient.mp4" />
     <Resource Include="Images\appointment.jpg" />
     <Resource Include="Images\appointment2.png" />
     <Resource Include="Images\blood-test.png" />
     <Resource Include="Images\doctor.png" />
     <Resource Include="Images\drug.png" />
-    <Resource Include="Images\edit-profile.mp4" />
     <Resource Include="Images\hosp.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -70,14 +61,11 @@
     <Resource Include="Images\hospital.png" />
     <Resource Include="Images\hospitalLogo.png" />
     <Resource Include="Images\nurse.png" />
-    <Resource Include="Images\patient-profile.mp4" />
     <Resource Include="Images\patient.png" />
     <Resource Include="Images\patientInfo.png" />
     <Resource Include="Images\prescription.png" />
     <Resource Include="Images\prescription2.png" />
     <Resource Include="Images\success.png" />
-    <Resource Include="Images\switching-between-tabs-admin.mp4" />
-    <Resource Include="Images\switching-between-tabs.mp4" />
     <Resource Include="Images\userImage.png" />
     <Resource Include="Images\warning.png" />
   </ItemGroup>
