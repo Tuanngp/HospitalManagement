@@ -33,7 +33,7 @@ namespace HMS
         {
             var builder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+                .AddJsonFile("D:\\FPT_Uni\\PRN301\\HospitalManagement\\HospitalManagement\\HMS\\appsettings.json", optional: false, reloadOnChange: true);
             IConfigurationRoot configuration = builder.Build();
             optionsBuilder.UseSqlServer(configuration.GetConnectionString("MyHospital"));
         }

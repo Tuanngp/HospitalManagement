@@ -1,23 +1,15 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using HMS.MVVM.Model.InsidePrescription;
+using HMS.MVVM.Model;
 using HMS.MVVM.Model.InsidePrescription.insideDrug;
 using HMS.MVVM.Model.InsidePrescription.insideTest;
 using HMS.MVVM.View.MessageWindow;
 using Prism.Commands;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Globalization;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows;
 
 namespace HMS.MVVM.ViewModel
 {
-	public partial class AddPrescriptionWindowVM : ObservableObject, ICloseWindows
+    public partial class AddPrescriptionWindowVM : ObservableObject, ICloseWindows
 	{
 
 
@@ -107,120 +99,184 @@ namespace HMS.MVVM.ViewModel
 		public DelegateCommand CreateDrugCommand =>
 			_createDrugCommand ?? (_createDrugCommand = new DelegateCommand(ExecuteCreateDrugCommand));
 
-		void ExecuteCreateDrugCommand()
-		{
-			Random random = new Random();
-			if (!isPrescriptionCreated)
-			{
-				isPrescriptionCreated = true;
-				prescripId = random.Next(100, 10000);
-				using (DataContext context = new DataContext())
-				{
-					var _pat = context.Patients.Single(x => x.IsPatientSelected == true);
-					patId = _pat.Id;
-					context.Prescriptions.Add(new Model.Prescription { Id = prescripId, PrescribedDate = PrescribedDate, PatientId = patId });
-					context.SaveChanges();
-				}
-			}
+		//void ExecuteCreateDrugCommand()
+		//{
+		//	if (!isPrescriptionCreated)
+		//	{
+		//		isPrescriptionCreated = true;
+		//		using (DataContext context = new DataContext())
+		//		{
+		//			var _pat = context.Patients.Single(x => x.IsPatientSelected == true);
+		//			patId = _pat.Id;
+		//			context.Prescriptions.Add(new Model.Prescription {PrescribedDate = PrescribedDate, PatientId = patId });
+		//			context.SaveChanges();
+  //                  prescripId = prescription.Id;
+  //              }
+		//	}
 
-			using (DataContext context = new DataContext())
-			{
-                double tmp;
-                var drg = context.Drugs.Single(x => x.TradeName == drugName);
+		//	using (DataContext context = new DataContext())
+		//	{
+  //              double tmp;
+  //              var drg = context.Drugs.Single(x => x.TradeName == drugName);
 
-				//Exception handling
+		//		if (String.IsNullOrWhiteSpace(DrugType) || String.IsNullOrWhiteSpace(Dose) || String.IsNullOrWhiteSpace(Duration_) || !Double.TryParse(Duration_, out tmp) || !Double.TryParse(Dose, out tmp))
+		//		{
+		//			if (String.IsNullOrWhiteSpace(DrugType) && String.IsNullOrWhiteSpace(Dose) && String.IsNullOrWhiteSpace(Duration_))
+		//			{
+		//				var msgWindow = new WarningMessageWindow("Please Enter Valid Prescription Details.\n Make Sure to fill all the fields!");
+		//				msgWindow.ShowDialog();
+		//			}
+		//			else if (String.IsNullOrWhiteSpace(DrugType))
+		//			{
+		//				var msgWindow = new WarningMessageWindow("Please Enter Valid Drug Type!");
+		//				msgWindow.ShowDialog();
+		//			}
+		//			else if (String.IsNullOrWhiteSpace(Dose) || !Double.TryParse(Dose, out tmp))
+		//			{
+		//				var msgWindow = new WarningMessageWindow("Please How many Dose at a time as a number \n \t\t(like 1,2,... ) ");
+		//				msgWindow.ShowDialog();
+		//			}
+		//			else if (String.IsNullOrWhiteSpace(Duration_) || !Double.TryParse(Duration_, out tmp))
+		//			{
+		//				var msgWindow = new WarningMessageWindow("Please Enter Valid Duration in days (like 1,2,...) ");
+		//				msgWindow.ShowDialog();
+		//			}
+		//			else
+		//			{
+		//				var messageWindow = new WarningMessageWindow("Please Enter Valid Prescription Details in all the fields!");
+		//				messageWindow.ShowDialog();
+		//			}
+		//		}
+		//		else
+		//		{
+		//			Dosage dsg = new Dosage { DrugId = drg.Id, DrugType = DrugType, Dose = Convert.ToDouble(Dose), Duration = Convert.ToDouble(Duration_), PrescriptionId = prescripId, Comments = Comments };
+		//			context.Dosages.Add(dsg);
 
-				if (String.IsNullOrWhiteSpace(DrugType) || String.IsNullOrWhiteSpace(Dose) || String.IsNullOrWhiteSpace(Duration_) || !Double.TryParse(Duration_, out tmp) || !Double.TryParse(Dose, out tmp))
-				{
-					if (String.IsNullOrWhiteSpace(DrugType) && String.IsNullOrWhiteSpace(Dose) && String.IsNullOrWhiteSpace(Duration_))
-					{
-						var msgWindow = new WarningMessageWindow("Please Enter Valid Prescription Details.\n Make Sure to fill all the fields!");
-						msgWindow.ShowDialog();
-					}
-					else if (String.IsNullOrWhiteSpace(DrugType))
-					{
-						var msgWindow = new WarningMessageWindow("Please Enter Valid Drug Type!");
-						msgWindow.ShowDialog();
-					}
-					else if (String.IsNullOrWhiteSpace(Dose) || !Double.TryParse(Dose, out tmp))
-					{
-						var msgWindow = new WarningMessageWindow("Please How many Dose at a time as a number \n \t\t(like 1,2,... ) ");
-						msgWindow.ShowDialog();
-					}
-					else if (String.IsNullOrWhiteSpace(Duration_) || !Double.TryParse(Duration_, out tmp))
-					{
-						var msgWindow = new WarningMessageWindow("Please Enter Valid Duration in days (like 1,2,...) ");
-						msgWindow.ShowDialog();
-					}
-					else
-					{
-						var messageWindow = new WarningMessageWindow("Please Enter Valid Prescription Details in all the fields!");
-						messageWindow.ShowDialog();
-					}
-				}
-				else
-				{
-					Dosage dsg = new Dosage { DrugId = drg.Id, DrugType = DrugType, Dose = Convert.ToDouble(Dose), Duration = Convert.ToDouble(Duration_), PrescriptionId = prescripId, Comments = Comments };
-					context.Dosages.Add(dsg);
+		//			var messageWindow = new MessageWindow($"Drug Id: \t{drg.Id}\nDrug Name: \t{DrugName}\nDose: \t{Dose}\nPresc ID: \t{prescripId}\nComments: \t{Comments}");
+		//			messageWindow.ShowDialog();
 
-					var messageWindow = new MessageWindow($"Drug Id: \t{drg.Id}\nDrug Name: \t{DrugName}\nDose: \t{Dose}\nPresc ID: \t{prescripId}\nComments: \t{Comments}");
-					messageWindow.ShowDialog();
-
-					context.SaveChanges();
-
-
-
-				}
-                
-                       
+		//			context.SaveChanges();
+		//		}
 				
-				Dosages.Clear();
-				foreach (var _dsg in context.Dosages.Where(x => x.PrescriptionId == prescripId))
-				{
-					Dosages.Add(_dsg);
-				}
+		//		Dosages.Clear();
+		//		foreach (var _dsg in context.Dosages.Where(x => x.PrescriptionId == prescripId))
+		//		{
+		//			Dosages.Add(_dsg);
+		//		}
 
-			}
-		}
+		//	}
+		//}
+        void ExecuteCreateDrugCommand()
+        {
+            if (!isPrescriptionCreated)
+            {
+                isPrescriptionCreated = true;
+                using (DataContext context = new DataContext())
+                {
+                    var _pat = context.Patients.Single(x => x.IsPatientSelected == true);
+                    patId = _pat.Id;
+                    var prescription = new Model.Prescription { PrescribedDate = PrescribedDate, PatientId = patId };
+                    context.Prescriptions.Add(prescription);
+                    context.SaveChanges();
+                    prescripId = prescription.Id;  // Lấy ID của prescription mới tạo
+                }
+            }
+
+            using (DataContext context = new DataContext())
+            {
+                double tmp;
+                var drg = context.Drugs.SingleOrDefault(x => x.TradeName == drugName);
+
+                if (String.IsNullOrWhiteSpace(DrugType) || String.IsNullOrWhiteSpace(Dose) || String.IsNullOrWhiteSpace(Duration_) || !Double.TryParse(Duration_, out tmp) || !Double.TryParse(Dose, out tmp))
+                {
+                    if (String.IsNullOrWhiteSpace(DrugType) && String.IsNullOrWhiteSpace(Dose) && String.IsNullOrWhiteSpace(Duration_))
+                    {
+                        var msgWindow = new WarningMessageWindow("Please Enter Valid Prescription Details.\n Make Sure to fill all the fields!");
+                        msgWindow.ShowDialog();
+                    }
+                    else if (String.IsNullOrWhiteSpace(DrugType))
+                    {
+                        var msgWindow = new WarningMessageWindow("Please Enter Valid Drug Type!");
+                        msgWindow.ShowDialog();
+                    }
+                    else if (String.IsNullOrWhiteSpace(Dose) || !Double.TryParse(Dose, out tmp))
+                    {
+                        var msgWindow = new WarningMessageWindow("Please How many Dose at a time as a number \n \t\t(like 1,2,... ) ");
+                        msgWindow.ShowDialog();
+                    }
+                    else if (String.IsNullOrWhiteSpace(Duration_) || !Double.TryParse(Duration_, out tmp))
+                    {
+                        var msgWindow = new WarningMessageWindow("Please Enter Valid Duration in days (like 1,2,...) ");
+                        msgWindow.ShowDialog();
+                    }
+                    else
+                    {
+                        var messageWindow = new WarningMessageWindow("Please Enter Valid Prescription Details in all the fields!");
+                        messageWindow.ShowDialog();
+                    }
+                }
+                else
+                {
+                    if (drg != null)
+                    {
+                        Dosage dsg = new Dosage { DrugId = drg.Id, DrugType = DrugType, Dose = Convert.ToDouble(Dose), Duration = Convert.ToDouble(Duration_), PrescriptionId = prescripId, Comments = Comments };
+                        context.Dosages.Add(dsg);
+
+                        var messageWindow = new MessageWindow($"Drug Id: \t{drg.Id}\nDrug Name: \t{drugName}\nDose: \t{Dose}\nPresc ID: \t{prescripId}\nComments: \t{Comments}");
+                        messageWindow.ShowDialog();
+
+                        context.SaveChanges();
+                    }
+                    else
+                    {
+                        var msgWindow = new WarningMessageWindow("Drug not found!");
+                        msgWindow.ShowDialog();
+                    }
+                }
+
+                Dosages.Clear();
+                foreach (var _dsg in context.Dosages.Where(x => x.PrescriptionId == prescripId))
+                {
+                    Dosages.Add(_dsg);
+                }
+            }
+        }
 
 
 
-		private DelegateCommand _createTestCommand;
+        private DelegateCommand _createTestCommand;
 		public DelegateCommand CreateTestCommand =>
 			_createTestCommand ?? (_createTestCommand = new DelegateCommand(ExecuteCreateTestCommand));
 
 		void ExecuteCreateTestCommand()
 		{
-			Random random = new Random();
 			if (!isPrescriptionCreated)
 			{
 				isPrescriptionCreated = true;
-				prescripId = random.Next(100, 10000);
 				using (DataContext context = new DataContext())
 				{
 					var _pat = context.Patients.Single(x => x.IsPatientSelected == true);
 					patId = _pat.Id;
-					context.Prescriptions.Add(new Model.Prescription { Id = prescripId, PrescribedDate = PrescribedDate, PatientId = patId });
+					context.Prescriptions.Add(new Model.Prescription {PrescribedDate = PrescribedDate, PatientId = patId });
 					context.SaveChanges();
 				}
 			}
-
-			using (DataContext context = new DataContext())
+			else
 			{
+                using (DataContext context = new DataContext())
+                {
+                    var _tst = context.Tests.Single(x => x.TestName == TestName);
+                    MedicalTest mtst = new MedicalTest { TestId = _tst.Id, PrescriptionId = prescripId, Description = TestDescription };
+                    context.MedicalTests.Add(mtst);
+                    context.SaveChanges();
 
-				var _tst = context.Tests.Single(x => x.TestName == TestName);
-				MedicalTest mtst = new MedicalTest { TestId = _tst.Id, PrescriptionId = prescripId, Description = TestDescription };
-				context.MedicalTests.Add(mtst);
-				context.SaveChanges();
-
-				MedicalTests.Clear();
-				foreach (var _mtst in context.MedicalTests.Where(x => x.PrescriptionId == prescripId))
-				{
-					MedicalTests.Add(_mtst);
-				}
-			}
-
-
+                    MedicalTests.Clear();
+                    foreach (var _mtst in context.MedicalTests.Where(x => x.PrescriptionId == prescripId))
+                    {
+                        MedicalTests.Add(_mtst);
+                    }
+                }
+            }
 		}
 
 		private DelegateCommand _doneCommand;
@@ -265,11 +321,8 @@ namespace HMS.MVVM.ViewModel
 					context.SaveChanges();
 				}
 			}
-
 			Close?.Invoke();
-
 		}
-
 
 		public AddPrescriptionWindowVM()
 		{
@@ -303,6 +356,5 @@ namespace HMS.MVVM.ViewModel
 			}
 
 		}
-
 	}
 }

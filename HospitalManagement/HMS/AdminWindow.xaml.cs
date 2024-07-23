@@ -24,10 +24,6 @@ namespace HMS
 
 		public AdminWindow()
 		{
-/*			var userGuide = new AdminUserGuide1();
-			userGuide.Topmost = true;
-			userGuide.Show();*/
-
 			DataContext = new AdminWindowVM();
 			InitializeComponent();
 		}
@@ -41,7 +37,6 @@ namespace HMS
 		private void CloseButton_Clicked(object sender, RoutedEventArgs e)
 		{
 			Application.Current.Shutdown();
-			//this.Close();
 		}
 
 		private void MinimizeButton_Clicked(object sender, RoutedEventArgs e)

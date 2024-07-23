@@ -48,9 +48,9 @@
                         </Border>
 
                         <!--Menu Titles-->
-                        <TextBlock Text="City Hospital" Foreground="White" FontSize="22" FontWeight="SemiBold"
+                        <TextBlock Text="FPT Hospital" Foreground="White" FontSize="22" FontWeight="SemiBold"
                                        DockPanel.Dock="Top" TextAlignment="Center" Margin="5 25 0 10"/>
-                        <TextBlock Text="Colombo, Sri Lanka" Foreground="#d0bfff" FontSize="14" FontWeight="SemiBold"
+                        <TextBlock Text="Da Nang" Foreground="#d0bfff" FontSize="14" FontWeight="SemiBold"
                                        DockPanel.Dock="Top" TextAlignment="Center"/>
 
                         <!--Menu Separator-->
@@ -141,9 +141,9 @@
                             </Ellipse>
                         </Border>
                         <StackPanel Margin="10 0 0 0">
-                            <TextBlock Text="Bond" Foreground="#394867" FontSize="14" FontWeight="SemiBold"
+                            <TextBlock Foreground="#394867" FontSize="14" FontWeight="SemiBold"
                                        DockPanel.Dock="Top" />
-                            <TextBlock Text="Admin User" Foreground="#9BA4B5" FontSize="14" FontWeight="SemiBold"
+                            <TextBlock Text="Admin" Foreground="#9BA4B5" FontSize="14" FontWeight="SemiBold"
                                        DockPanel.Dock="Top" />
                         </StackPanel>
 

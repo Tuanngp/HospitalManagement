@@ -82,7 +82,6 @@ namespace HMS.MVVM.ViewModel
 				PrescriptionCount = context.Prescriptions.Count().ToString();
 				TestCount = context.Tests.Count().ToString();
 				DoctorCount = context.Doctors.Count().ToString();
-				
 			}
 
 			Read();

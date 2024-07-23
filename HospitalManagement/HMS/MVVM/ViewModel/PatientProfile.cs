@@ -172,69 +172,77 @@ namespace HMS.MVVM.ViewModel
 				}
 			}
 		}
+        public void billingCalculate()
+        {
+            using (DataContext context = new DataContext())
+            {
+                var apps = context.Appointments.Where(x => x.PatientId == Convert.ToInt32(PatId)).ToList();
+                var prescs = context.Prescriptions.Where(x => x.PatientId == Convert.ToInt32(PatId)).ToList();
 
-		public void billingCalculate()
-		{
-			using (DataContext context = new DataContext())
-			{
-				var apps = context.Appointments.Where(x => x.PatientId == Convert.ToInt32(PatId)).ToList();
-				var prescs = context.Prescriptions.Where(x => x.PatientId == Convert.ToInt32(PatId)).ToList();
+                // Billing
+                double _docFee = 0;
+                foreach (var app in apps)
+                {
+                    using (DataContext docContext = new DataContext())
+                    {
+                        _docFee += docContext.Doctors.Single(x => x.Id == app.DoctorId).Fee;
+                    }
+                }
+                DoctorFee = $"Doctor Fee             : LKR {_docFee}";
 
-				//Billing
-				double _docFee = 0;
-				foreach (var app in apps)
-				{
-					_docFee += context.Doctors.Single(x => x.Id == app.DoctorId).Fee;
-				}
-				DoctorFee = $"Doctor Fee             : LKR {_docFee}";
+                double _testFee = 0;
+                foreach (var presc in prescs)
+                {
+                    using (DataContext medContext = new DataContext())
+                    {
+                        var medTests = medContext.MedicalTests.Where(x => x.PrescriptionId == presc.Id).ToList();
+                        foreach (var medTest in medTests)
+                        {
+                            using (DataContext testContext = new DataContext())
+                            {
+                                _testFee += testContext.Tests.Single(x => x.Id == medTest.TestId).Fee;
+                            }
+                        }
+                    }
+                }
+                TestFee = $"Test Fee                  : LKR {_testFee}";
 
-				double _testFee = 0;
-				foreach (var presc in prescs)
-				{
-					
-					foreach (var medTest in context.MedicalTests.Where(x => x.PrescriptionId == presc.Id))
-					{
-						_testFee += context.Tests.Single(x => x.Id == medTest.TestId).Fee;
-					}
+                HospitalFee = $"Hospital Fee (10%) : LKR {(_docFee + _testFee) * 0.1}";
 
-				}
-				TestFee = $"Test Fee                  : LKR {_testFee}";
+                TotalFee = $"Total Fee                 : LKR {_docFee + _testFee + (_docFee + _testFee) * 0.1}";
 
-				HospitalFee = $"Hospital Fee (10%) : LKR {(_docFee + _testFee) * 0.1}";
+                Random random = new Random();
 
-				TotalFee = $"Total Fee                 : LKR {_docFee + _testFee + (_docFee + _testFee) * 0.1}";
+                var bill = new Bill
+                {
+                    BillAmount = _docFee + _testFee + (_docFee + _testFee) * 0.1,
+                    PaymentMode = (random.Next(2) == 0) ? "Cash" : "Card",
+                    Status = false,
+                    PaymentDate = DateTime.Now,
+                    PatientId = Convert.ToInt32(PatId)
+                };
 
+                using (DataContext billContext = new DataContext())
+                {
+                    var tmp = billContext.Bills.Where(x => x.PatientId == Convert.ToInt32(PatId)).ToList();
 
-				Random random = new Random();
-
-				var bill = new Bill
-				{
-					BillAmount = _docFee + _testFee + (_docFee + _testFee) * 0.1,
-					PaymentMode = (random.Next(2) == 0) ? "Cash" : "Card",
-					Status = false,
-					PaymentDate = DateTime.Now,
-					PatientId = Convert.ToInt32(PatId)
-				};
-
-				var tmp = context.Bills.Where(x => x.Id == Convert.ToInt32(PatId));
-
-				if (tmp.Count() > 0)
-				{
-					var _b = context.Bills.Single(x => x.Id == Convert.ToInt32(PatId));
-					_b.BillAmount = _docFee + _testFee + (_docFee + _testFee) * 0.1;
-					_b.PaymentMode = (random.Next(2) == 0) ? "Cash" : "Card";
-					_b.Status = false;
-					_b.PaymentDate = DateTime.Now;
-					context.SaveChanges();
-				}
-
-				else
-				{
-					context.Bills.Add(bill);
-					context.SaveChanges();
-				}
-			}
-		}
+                    if (tmp.Count > 0)
+                    {
+                        var _b = billContext.Bills.Single(x => x.PatientId == Convert.ToInt32(PatId));
+                        _b.BillAmount = _docFee + _testFee + (_docFee + _testFee) * 0.1;
+                        _b.PaymentMode = (random.Next(2) == 0) ? "Cash" : "Card";
+                        _b.Status = false;
+                        _b.PaymentDate = DateTime.Now;
+                        billContext.SaveChanges();
+                    }
+                    else
+                    {
+                        billContext.Bills.Add(bill);
+                        billContext.SaveChanges();
+                    }
+                }
+            }
+        }
 
 		// Calculate each patient's appointment fee which doctor is charging 
 		public static double calculateDoctorFeeBasedOnAppointments(List<Appointment> _appointments,List<Doctor> _doctors)

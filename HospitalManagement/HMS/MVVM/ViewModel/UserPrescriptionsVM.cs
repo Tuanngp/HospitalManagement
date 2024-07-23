@@ -1,20 +1,13 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using HMS.MVVM.Model;
 using HMS.MVVM.View.MessageWindow;
-using HMS.MVVM.View.Patients;
 using HMS.MVVM.View.Prescriptions;
 using Prism.Commands;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 
 namespace HMS.MVVM.ViewModel
 {
-	public partial class UserPrescriptionsVM : ObservableObject
+    public partial class UserPrescriptionsVM : ObservableObject
 	{
 		private ObservableCollection<Prescription> _prescriptionsData = new ObservableCollection<Prescription>();
 
@@ -40,7 +33,6 @@ namespace HMS.MVVM.ViewModel
 
 		void ExecuteRefreshListCommand()
 		{
-			
 			var messageWindow = new MessageWindow("You clicked refresh 🔃");
 			messageWindow.ShowDialog();
 
